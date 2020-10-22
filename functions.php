@@ -1,9 +1,3 @@
-<!-- <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
-     <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
-<!-- <script src="  " type="text/javascript"></script> -->
-
-<script src="static/js/main.min.js"></script>
-
 <?php
 
 function load_stylesheets() {
@@ -36,3 +30,9 @@ $args = array (
     'default-image' => get_template_directory_uri() .'/Images/background.jpg',
 );
 add_theme_support( 'custom-background', $args );
+
+add_action('acf/register_fields', 'my_register_fields');
+
+function my_register_fields() {
+    include_once('acf-image-crop/acf-image-crop.php');
+}

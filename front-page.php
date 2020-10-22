@@ -83,7 +83,7 @@
                     <div class="about__content">
                         <div class="about__left">
                             <!--  <img data-src="<?php  bloginfo('template_directory');?>/static/img/content/about-img.jpg"> -->
-                                  <?php  echo $subhero['image'];?>
+                            <?php  echo $subhero['image'];?>
 <img data-src="<?php  echo bloginfo('url');?>/wp-content/uploads/2020/10/arch.png">
                         </div>
                         <div class="about__right">
@@ -121,6 +121,7 @@
                         ПРОДУКЦИЯ
                     </div>
                     <div class="prod">
+
                         <div class="prod__items">
                             <div class="prod__item">
                                 <div class="prod__img m-bg-cont">
@@ -140,32 +141,40 @@
 
                                     </div>
                                 </div>
-                                <div class="prod__item-images">
-                                    <div class="prod__tab-image">
-                                        <!--  <img data-src="<?php  bloginfo('template_directory');?>/static/arch.png">  -->
-                                    </div>
-                                     <div class="prod__tab-image">
-                                        <img data-src="<?php  bloginfo('template_directory');?>/static/img/content/prod-gal-image.jpg">
-                                    </div>
-                                    <div class="prod__tab-image">
-                                        <img data-src="<?php  bloginfo('template_directory');?>/static/img/content/prod-gal-image.jpg">
-                                    </div>
-                                    <div class="prod__tab-image">
-                                        <img data-src="<?php  bloginfo('template_directory');?>/static/img/content/prod-gal-image.jpg">
-                                    </div>
-                                    <div class="prod__tab-image">
-                                        <img data-src="<?php  bloginfo('template_directory');?>/static/img/content/prod-gal-image.jpg">
-                                    </div>
+
+
+                                <?php  $image=get_field('image_one');?>
+                                <?php  $size = 'full';
+                                if ($image) {
+                                    echo wp_get_attachment_image( $image, $size);
+                                }
+                                ?>
+
+
+
+
+
                                     <div class="prod__tab-image">
                                         <img data-src="<?php  bloginfo('template_directory');?>/static/img/content/prod-gal-image.jpg">
                                     </div>
-                                </div>
+                                    <div class="prod__tab-image">
+                                        <img data-src="<?php  bloginfo('template_directory');?>/static/img/content/prod-gal-image.jpg">
+                                    </div>
+
+
+                                    <?php  $image=get_field('image_two');?>
+                                    <?php  $size = 'full';
+                                    if ($image) {
+                                        echo wp_get_attachment_image( $image, $size);
+                                    }
+                                    ?>
+
                                 <div class="prod__item-desc">
                                     <h3>
 
                                         Feets
 
-                                </h3>
+                                    </h3>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi esse, reiciendis vel sequi error autem omnis iste veritatis temporibus repellat, doloremque itaque? Sint, suscipit qui, consequatur perferendis nam fugiat assumenda ipsa repellat placeat illo
                                         debitis non, molestiae eius temporibus unde at blanditiis magnam enim praesentium. Corporis in omnis ea cupiditate reprehenderit molestias tempora eligendi, voluptatibus labore vitae ducimus velit pariatur illum
@@ -210,9 +219,9 @@
                                 <div class="prod__item-desc">
                                     <h3>
 
-                                    Feets 2
+                                        Feets 2
 
-                                </h3>
+                                    </h3>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi esse, reiciendis vel sequi error autem omnis iste veritatis temporibus repellat, doloremque itaque? Sint, suscipit qui, consequatur perferendis nam fugiat assumenda ipsa repellat placeat illo
                                         debitis non, molestiae eius temporibus unde at blanditiis magnam enim praesentium. Corporis in omnis ea cupiditate reprehenderit molestias tempora eligendi, voluptatibus labore vitae ducimus velit pariatur illum
@@ -248,9 +257,9 @@
                                 <div class="prod__item-desc">
                                     <h3>
 
-                                    Feets 3
+                                        Feets 3
 
-                                </h3>
+                                    </h3>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi esse, reiciendis vel sequi error autem omnis iste veritatis temporibus repellat, doloremque itaque? Sint, suscipit qui, consequatur perferendis nam fugiat assumenda ipsa repellat placeat illo
                                         debitis non, molestiae eius temporibus unde at blanditiis magnam enim praesentium. Corporis in omnis ea cupiditate reprehenderit molestias tempora eligendi, voluptatibus labore vitae ducimus velit pariatur illum
@@ -283,9 +292,9 @@
                                 <div class="prod__item-desc">
                                     <h3>
 
-                                    Feets 4
+                                        Feets 4
 
-                                </h3>
+                                    </h3>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi esse, reiciendis vel sequi error autem omnis iste veritatis temporibus repellat, doloremque itaque? Sint, suscipit qui, consequatur perferendis nam fugiat assumenda ipsa repellat placeat illo
                                         debitis non, molestiae eius temporibus unde at blanditiis magnam enim praesentium. Corporis in omnis ea cupiditate reprehenderit molestias tempora eligendi, voluptatibus labore vitae ducimus velit pariatur illum
@@ -331,9 +340,9 @@
                                 <div class="prod__item-desc">
                                     <h3>
 
-                                    Feets 5
+                                        Feets 5
 
-                                </h3>
+                                    </h3>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi esse, reiciendis vel sequi error autem omnis iste veritatis temporibus repellat, doloremque itaque? Sint, suscipit qui, consequatur perferendis nam fugiat assumenda ipsa repellat placeat illo
                                         debitis non, molestiae eius temporibus unde at blanditiis magnam enim praesentium. Corporis in omnis ea cupiditate reprehenderit molestias tempora eligendi, voluptatibus labore vitae ducimus velit pariatur illum
@@ -366,9 +375,9 @@
                                 <div class="prod__item-desc">
                                     <h3>
 
-                                    Feets 6
+                                        Feets 6
 
-                                </h3>
+                                    </h3>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi esse, reiciendis vel sequi error autem omnis iste veritatis temporibus repellat, doloremque itaque? Sint, suscipit qui, consequatur perferendis nam fugiat assumenda ipsa repellat placeat illo
                                         debitis non, molestiae eius temporibus unde at blanditiis magnam enim praesentium. Corporis in omnis ea cupiditate reprehenderit molestias tempora eligendi, voluptatibus labore vitae ducimus velit pariatur illum
@@ -401,9 +410,9 @@
                                 <div class="prod__item-desc">
                                     <h3>
 
-                                    Feets 7
+                                        Feets 7
 
-                                </h3>
+                                    </h3>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi esse, reiciendis vel sequi error autem omnis iste veritatis temporibus repellat, doloremque itaque? Sint, suscipit qui, consequatur perferendis nam fugiat assumenda ipsa repellat placeat illo
                                         debitis non, molestiae eius temporibus unde at blanditiis magnam enim praesentium. Corporis in omnis ea cupiditate reprehenderit molestias tempora eligendi, voluptatibus labore vitae ducimus velit pariatur illum
@@ -436,9 +445,9 @@
                                 <div class="prod__item-desc">
                                     <h3>
 
-                                    Feets 8
+                                        Feets 8
 
-                                </h3>
+                                    </h3>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi esse, reiciendis vel sequi error autem omnis iste veritatis temporibus repellat, doloremque itaque? Sint, suscipit qui, consequatur perferendis nam fugiat assumenda ipsa repellat placeat illo
                                         debitis non, molestiae eius temporibus unde at blanditiis magnam enim praesentium. Corporis in omnis ea cupiditate reprehenderit molestias tempora eligendi, voluptatibus labore vitae ducimus velit pariatur illum
@@ -804,7 +813,21 @@
             </div>
         </div>
 
-        <img src="http://localhost/wordpress/wp-content/themes/task/static/img/arch.png">
+        <!--           <img src="http://localhost/wordpress/wp-content/themes/task/static/img/arch.png"> -->
 
 
-<?php  get_footer();?>
+
+
+
+
+        <?php  $image=get_field('image_two');?>
+        <?php  $size = 'full';
+        if ($image) {
+            echo wp_get_attachment_image( $image, $size);
+        }
+        ?>
+
+
+
+
+        <?php  get_footer();?>
